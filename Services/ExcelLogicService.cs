@@ -26,8 +26,8 @@ namespace ExcelDataExtract.Services
         #region Constants
         //Read the connection string for the Excel file.
         private static string excelConString;
-        private string sheetName;
         private static string dbConString;
+        private string sheetName;
         #endregion
         public ExcelLogicService(ILogger<ExcelLogicService> logger, IHostingEnvironment _environment, IConfiguration configuration)
         {
@@ -91,7 +91,7 @@ namespace ExcelDataExtract.Services
                             }
                         }
                     }
-
+                    //to check Data extraction from Excel worked successfully.
                     if (success)
                     {
                         CreateDynamicTable(datatable, postedFile);
