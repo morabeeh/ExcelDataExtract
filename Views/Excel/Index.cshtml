@@ -1,0 +1,43 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        .success-message {
+            color: green;
+        }
+
+        .failure-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form asp-controller="Excel" asp-action="ExtractExcelData" method="post" enctype="multipart/form-data">
+        <input type="file" name="postedFile" />
+        <input type="submit" value="Import" />
+    </form>
+
+    @if (ViewBag.Success != null && ViewBag.Success)
+    {
+        <div class="success-message">
+            Excel data extraction and table creation were successful.
+        </div>
+    }
+    else if (ViewBag.Success != null && !ViewBag.Success)
+    {
+        <div class="failure-message">
+            An error occurred during Excel data extraction or table creation.
+        </div>
+    }
+</body>
+</html>
+
+
