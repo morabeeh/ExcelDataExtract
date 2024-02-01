@@ -24,15 +24,20 @@ Still in appsettings.json, modify the "ExcelConString" value under ConnectionStr
 
 ### Prerequisites
 
-Visual Studio,.NET SDK installed on your machine(.NET, .NET Core), Microsoft SQL Server,Micorosft AccessDatabaseEngine 12.0 or higher, Microsft Excel installed on your machine, A sample Excel data to upload extract data, NuGet Package Manager. 
+Visual Studio,.NET SDK installed on your machine(.NET, .NET Core), Microsoft SQL Server, Micorosft AccessDatabaseEngine 12.0 or higher, Microsft Excel installed on your machine, A sample Excel data to upload extract data, NuGet Package Manager. 
 
 ### Installation
 Ensure the presence of the following NuGet packages in your project. If any of these packages are missing, install them using the Package Manager Console or Visual Studio NuGet Package Manager.
 ** System.Data.SqlClient -> Install-Package System.Data.SqlClient
+
 ** System.Data.OleDb -> Install-Package System.Data.OleDb
+
 ** Serilog -> Install-Package Serilog
+
 ** Serilog.Sinks.File -> Install-Package Serilog.Sinks.File
+
 ** Serilog.Sinks.Console -> Install-Package Serilog.Sinks.Console
+
 ** Serilog.Extensions.Logging -> Install-Package Serilog.Extensions.Logging
 
 
